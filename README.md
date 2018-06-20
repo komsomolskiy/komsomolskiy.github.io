@@ -1,1 +1,0 @@
-# komsomolskiy.github.io
