@@ -3,6 +3,9 @@
 			object.addEventListener ? object.addEventListener(type, callback, false) : object.attachEvent && object.attachEvent("on" + type, callback);
 		},
 		isStyle = function(file) {
+			var regex = /main\.css$/i;
+			if(regex.test(file))
+				return false;
 			return window.localStorage && localStorage.file
 		},
 		loadStyle = function(file) {
@@ -37,6 +40,7 @@
 		};
 	
 	var fonts = [
+		window.location.origin + '/assets/templates/komsomolskiy/css/main.css',
 		window.location.origin + '/assets/templates/komsomolskiy/css/komsomolskiy.css?wt598r',
 		"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext",
 	];
