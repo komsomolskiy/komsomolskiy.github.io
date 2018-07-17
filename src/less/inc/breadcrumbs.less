@@ -1,0 +1,50 @@
+.breadcrumbs {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	&-list {
+		list-style: none;
+		display: inline-block;
+		padding: 0px;
+		margin: 0px;
+		line-height: 1.5;
+		font-size: 1em;
+		.item {
+			position: relative;
+			display: inline-block;
+			padding-right: 20px;
+			&:after {
+				content: "-";
+				display: block;
+				position: absolute;
+				right: 5px;
+				top: 0px;
+			}
+			&:last-child {
+				padding-right: 0px;
+				&:after {
+					display: none;
+				}
+			}
+			> a {
+				text-decoration: none;
+				&,
+				&:hover,
+				&:focus {
+					color: #047192;
+				}
+				&:hover {
+					text-decoration: underline;
+				}
+				span {
+					
+				}
+			}
+			> span {
+				
+			}
+		}
+	}
+	@media(min-width: 768px){
+		//margin-top: -15px;
+	}
+}

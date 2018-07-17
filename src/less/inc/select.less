@@ -1,0 +1,130 @@
+.select {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	font-size: 16px;
+	color: #fff;
+	height: 40px;
+	.unselect();
+	&-hidden {
+		display: none;
+		visibility: hidden;
+		padding-right: 10px;
+	}
+	&-styled {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #068ca9;
+		padding: 8px 15px;
+		-moz-transition: all 0.2s ease-in;
+		-o-transition: all 0.2s ease-in;
+		-webkit-transition: all 0.2s ease-in;
+		transition: all 0.2s ease-in;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding-right: 35px;
+		line-height: 22px;
+		span {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: block;
+			max-width: 100%;
+			overflow: hidden;
+		}
+		&:after {
+			content: "";
+			width: 0;
+			height: 0;
+			border: 7px solid transparent;
+			border-color: #fff transparent transparent transparent;
+			position: absolute;
+			top: 16px;
+			right: 10px;
+		}
+		&:hover {
+			background-color: #22a9b9;
+		}
+		
+		//&:active,
+		&.active {
+			background-color: #209dac;
+			&:after {
+				top: 9px;
+				border-color: transparent transparent #fff transparent;
+			}
+			+ .select {
+				&-options {
+					display: block;
+					top: 100%;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&-options {
+		position: absolute;
+		display: none;
+		top: 100%;
+		right: 0;
+		left: 0;
+		z-index: 999;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background-color: #209dac;
+		opacity: 0;
+		max-height: 145px;
+		overflow: auto;
+		li {
+			margin: 0;
+			padding: 12px 15px;
+			border-top: 1px solid #1c8a97;
+			-moz-transition: all 0.15s ease-in;
+			-o-transition: all 0.15s ease-in;
+			-webkit-transition: all 0.15s ease-in;
+			transition: all 0.15s ease-in;
+			line-height: 22px;
+			span {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: block;
+			}
+			&:hover {
+				color: #24b1c2;
+				background: #fff;
+			}
+			&[rel="hide"] {
+				display: none;
+			}
+		}
+	}
+}
+
+.map-fancybox {
+	&.fancybox-show-thumbs {
+		.fancybox-inner {
+			right: 0;
+			bottom: 95px;
+			@media (max-width: 800px) {
+				right: 0px;
+			}
+		}
+	}
+	.fancybox-thumbs {
+		&.fancybox-thumbs-x {
+			top: auto;
+			width: auto;
+			bottom: 0;
+			left: 0;
+			right : 0;
+			height: 95px;
+			padding: 10px 10px 5px 10px;
+			box-sizing: border-box;
+			background: rgba(0, 0, 0, 0.3);
+		}
+	}
+}

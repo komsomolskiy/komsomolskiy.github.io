@@ -1,0 +1,172 @@
+.header {
+	color: #fff;
+	line-height: 1.15;
+	&-top {
+		//padding-top: 10px;
+		//padding-bottom: 10px;
+		background-color: #0039A6;
+		position: relative;
+		&-search {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: no-wrap;
+			max-width: 300px;
+			input {
+				flex: 1 0 83%;
+			}
+			button {
+				flex: 1 0 10%;
+			}
+		}
+		.eye {
+			font-size: 16px;
+			&,
+			&:hover,
+			&:focus {
+				color: #fff;
+				text-decoration: none;
+				line-height: 1;
+			}
+			> i {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 10px;
+				margin-bottom: 0px;
+				font-size: 16px;
+				@media (min-width: @media-navbar) {
+					//margin-bottom: 3px;
+					//font-size: 16px;
+				}
+			}
+			span {
+				display: inline;
+				font-size: 16px;
+			}
+		}
+	}
+	&-bottom {
+		background-image: data-uri('@{assets}/images/header-bg.jpg');
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		> .container {
+			> .row {
+				padding-top:15px;
+				padding-bottom: 15px;
+				background-image: data-uri('@{assets}/images/russian-flag.png');
+				background-position: center right;
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				@media (min-width: @media-navbar) {
+					background-position: center left;
+				}
+				@media (max-width: 629px) {
+					background-image: none;
+				}
+			}
+		}
+		&-logotip {
+			display: none;
+			align-items: stretch;
+			img {
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+				max-width: 100%;
+				@media (min-width: @media-navbar) {
+					width: 100%;
+				}
+			}
+			&-list {
+				padding-left: 0px;
+				margin: 0px;
+				list-style: none;
+				line-height: 1;
+				display: block;
+				li {
+					padding-bottom: 15px;
+					float: left;
+					margin-right: 15px;
+					&:last-child {
+						margin-right: 0px;
+					}
+					a {
+						display: block;
+						font-size: 30px;
+						@media (min-width: @media-navbar) {
+							font-size: 22px;
+						}
+						&,
+						&:hover,
+						&:focus {
+							color: #fff;
+							text-decoration: none;
+							outline-style: none;
+							outline-width: 0;
+						}
+					}
+					@media (min-width: @media-navbar) {
+						float: none;
+						margin-right: 0px;
+						&:last-child {
+							padding-bottom: 0px;
+						}
+					}
+				}
+			}
+			> * {
+				&:first-child {
+					order: 2;
+					padding-top: 15px;
+				}
+				&:last-child {
+					order: 1;
+				}
+				@media (min-width: @media-navbar) {
+					&:first-child {
+						order: 1;
+						padding-top: 0px;
+					}
+					&:last-child {
+						order: 2;
+					}
+				}
+			}
+			@media (max-width: 767px) {
+				max-width: 185px;
+				&,
+				&.row {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+			@media (min-width: @media-navbar) {
+				display: flex;
+			}
+		}
+		&-title {
+			max-width: 700px;
+			font-size: 24px;
+			font-weight: 400;
+			margin-bottom: 0px;
+			padding-left: 25px;
+			padding-right: 25px;
+			display: flex;
+			flex-direction: column;
+			&-name {
+				flex: 1;
+				text-shadow: 0px 0px 4px #000;
+			}
+			&-site {
+				display: block;
+				padding-top: 20px;
+				padding-bottom: 10px;
+				font-weight: 300;
+				font-size: 16px;
+				@media(min-width: @media-navbar){
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+}

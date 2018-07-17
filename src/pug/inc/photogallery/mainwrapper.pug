@@ -1,0 +1,17 @@
+main.main.container.clearfix
+	.row
+		include breadcrumbs
+		.col-lg-3.col-md-3.col-xs-12.sitebar
+			include ../sitebar
+		.col-lg-9.col-md-9.col-xs-12.sitecontent
+			.sitecontent-wrapper
+				h1.page-title
+					|#{pageTitle}
+				p
+					|Пока размещаем только разметку. Что называется "только накидываем скелет". Пока идей представления списка фотогаллерей нет
+				.photogalleris.row
+					- var n = 1;
+					while n < 7
+						include article
+				.photogalleris
+					include paginate

@@ -1,0 +1,31 @@
+{
+  "name": "komsomolskiy_site",
+  "description": "Сайт поселения Комсомольский Кинельского района Самарской области",
+  "main": "package.json",
+  "authors": [
+    "ProjectSoft <projectsoft2009@yandex.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/komsomolskiy/komsomolskiy.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "normalize.css#>=7.0.0",
+    "yepnope": ">=2.0.0",
+    "jquery": "^3.3.1",
+    "jquery.transform.js": "https://github.com/louisremi/jquery.transform.js.git",
+    "fancybox": "https://github.com/fancyapps/fancybox.git",
+    "arcticModal": "https://studionions@bitbucket.org/projectsoft-studionions/arcticmodal.git",
+    "jquery.forestedglass": "https://github.com/ProjectSoft-STUDIONIONS/jquery.forestedglass.git",
+    "jquery.cookie": "https://github.com/carhartl/jquery-cookie.git",
+    "flexboxgrid": "https://github.com/kristoferjoseph/flexboxgrid.git#^6.3.2",
+    "slick-carousel": "^1.8.1",
+    "hypher": "https://github.com/ProjectSoft-STUDIONIONS/hypher.git#^0.2.4",
+    "snazzy-info-window": "https://github.com/atmist/snazzy-info-window.git#^1.1.1"
+  }
+}

@@ -1,0 +1,22 @@
+article.news-item.row
+	a.col-lg-4.col-md-5.col-sm-4.col-xs-12.news-item-link.link(href=host + "news.html")
+		.img
+			.img-bg(style="background-image: url('assets/templates/komsomolskiy/images/koms.jpg')")
+				img(alt="Изображение новости" src="assets/templates/komsomolskiy/images/koms.jpg")
+	.col-lg-8.col-md-7.col-sm-8.col-xs-12.news-item-main
+		p.news-item-main-title
+			a.link.h3(href=host + "news.html")
+				|Название новости #{val}
+		p.news-item-main-content
+			|Краткое описание новости. Не очень длинный текст для отображения главной темы новости. Краткое описание новости. Не очень длинный текст для отображения главной темы новости...
+		.news-item-main-info
+			time(datetime="2018")
+				- var time = 12 - val
+				i.koms-calendar
+				|&nbsp;
+				span
+					|#{time} июля 2018 г.
+			.news-item-main-info-readmore
+				a.btnkoms.link(href=host + "news.html")
+					span
+						|Подробнее

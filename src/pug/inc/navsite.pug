@@ -1,0 +1,11 @@
+.navsite.container-fluid
+	.row
+		.container(data-plugin="navsite" data-button="button" data-nav="nav" data-panel=".navsite-panel")
+			.navsite-panel
+				button.navsite-panel-button(data-text="Главное меню")
+					span
+					span
+					span
+			nav.navsite-nav
+				ul.navsite-nav-list(itemscope itemtype="http://schema.org/SiteNavigationElement")
+					include menutemp

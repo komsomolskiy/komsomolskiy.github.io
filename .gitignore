@@ -1,0 +1,15 @@
+desktop.*
+**/.*
+bin/**/*
+photos/**/*
+node_modules/**/*
+bower_components/**/*
+test/**/*
+tests/**/*
+src/bin/**/*.*
+src/bin/*.*
+package-lock.json
+!**/.gitignore
+!src/bin/*.svg
+!src/bin/*.zip
+!src/bin/*.psd

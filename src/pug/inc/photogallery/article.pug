@@ -1,0 +1,14 @@
+.container-fluid.photogalleris-item
+	.row
+		a.col-xs-6.photogalleris-item-link.link(href=host + "photogallery.html")
+			.photogalleris-item-link-img.row(style="background-image: url(assets/templates/komsomolskiy/images/koms.jpg)")
+		.col-xs-6.photogalleris-item-description
+			h3.photogalleris-item-description-title
+				a.link(href=host + "photogallery.html")
+					|Название фотогаллереи №#{n}
+			p.photogalleris-item-description-wrapper
+				|Описание фотогаллереи Описание фотогаллереи Описание фотогаллереи 
+			a.link.btnkoms(href=host + "photogallery.html" data-text="Смотреть")
+				span
+					|Смотреть
+- ++n

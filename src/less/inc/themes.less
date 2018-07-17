@@ -1,0 +1,76 @@
+body {
+	background-color: #fff;
+	color: #333;
+	min-height: 100vh;
+	font-family: 'Open Sans';
+	font-size: 1em;
+	transition: font-size .15s ease;
+	line-height: 1.5;
+	&.eye {
+		&-20 {
+			font-size: 1.25em;
+		}
+		&-24 {
+			font-size: 1.5em;
+		}
+	}
+}
+
+h1, .h1 {
+	font-weight: 600;
+	font-size: 1.8em;
+}
+
+h2, .h2 {
+	font-weight: 600;
+	font-size: 1.4em;
+}
+
+h3, .h3 {
+	font-weight: 600;
+	font-size: 1.2em;
+}
+
+h4, .h4 {
+	font-weight: 600;
+	font-size: 1em;
+}
+
+img {
+	max-width: 100%;
+	border: 0px;
+	pointer-events: none;
+}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 12px;
+}
+
+ul, ol {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+a {
+	&,
+	&:focus {
+		color: #047492;
+	}
+	&:hover {
+		color: #068ca9;
+	}
+}
+
+a,
+input[type="button"],
+input[type="submit"],
+input[type="file"] {
+	&:focus {
+		outline: none;
+	}
+}
+
+.flex {
+	display: flex;
+}

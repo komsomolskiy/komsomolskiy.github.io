@@ -1,0 +1,13 @@
+main.main.container.clearfix
+	.row
+		include breadcrumbs
+		.col-lg-3.col-md-3.col-xs-12.sitebar
+			include ../sitebar
+		.col-lg-9.col-md-9.col-xs-12.sitecontent
+			.sitecontent-wrapper
+				h1.page-title
+					|#{pageTitle}
+				.news
+					each val in [1, 2, 3, 4, 5]
+						include article
+				include paginate

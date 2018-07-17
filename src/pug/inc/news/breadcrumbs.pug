@@ -1,0 +1,12 @@
+.container-fluid.bread
+	nav.breadcrumbs
+		ul.breadcrumbs-list(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li.item(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+				a.link(href=host + "index.html" itemprop="item")
+					span(itemprop="name")
+						|Главная
+					meta(itemprop="position" content="1")
+			li.item(itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+				a.link(href=host + "news.html" itemprop="item")
+					span(itemprop="name")
+						|Новости

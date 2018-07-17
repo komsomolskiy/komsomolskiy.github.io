@@ -1,0 +1,13 @@
+doctype html
+html(prefix="og: http://ogp.me/ns#" lang="ru")
+	include variables
+	- var pageTitle = "Фотогаллереи";
+	include inc/head
+	body.load(ondragstart="return !1;")
+		include inc/preloader
+		.page.clearfix
+			include inc/header
+			include inc/navsite
+			include inc/photogallery/mainwrapper
+			include inc/footer
+		include after_body

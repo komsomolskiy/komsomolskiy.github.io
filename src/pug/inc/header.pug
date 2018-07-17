@@ -1,0 +1,36 @@
+header.header.container-fluid
+	.row.header-top
+		a.eye(href="javascript:;")
+			i.koms-eye
+			span
+				|Версия для слабовидящих
+		.container
+			.row
+				.col-sm-6.col-xs-11.start-xs
+					.header-top-search
+					//
+						input(type="search" placeholder="Поиск")
+						button
+							|Go!
+				.col-sm-6.col-xs-1.end-xs
+	.row.header-bottom
+		.container
+			.row
+				.col-lg-2.col-md-2.col-sm-3.col-xs-12.start-md.start-sm
+					.row.header-bottom-logotip.middle-xs
+						.col-sm-3.col-xs-12.start-sm.middle-sm.flex.middle-xs.center-xs
+							ul.header-bottom-logotip-list
+								li
+									a.link.koms-hous(href=host + "" title="Главная")
+								li
+									a.link.koms-email(href=host + "" title="Контакты")
+								li
+									a.link.koms-sitemap(href=host + "" title="Карта сайта")
+						a.link.col-sm-9.col-xs-12.end-sm.middle-sm.flex(href=host + "")
+				.col-lg-10.col-md-10.col-sm-9.col-xs-12.start-xs.flex
+					p.header-bottom-title
+						span.header-bottom-title-name
+							|#{headertitle}
+						=" "
+						span.header-bottom-title-site
+							|#{ofsite}
