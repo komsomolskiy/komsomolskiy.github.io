@@ -28,7 +28,16 @@ module.exports = function(grunt){
 							],
 							dest: 'assets/templates/komsomolskiy/js/',
 							filter: 'isFile'
-						}
+						},
+						{
+							expand: true,
+							flatten : true,
+							src: [
+								'src/pug/inc/fonts.js'
+							],
+							dest: 'test/js/',
+							filter: 'isFile'
+						},
 					]
 				},
 				js: {

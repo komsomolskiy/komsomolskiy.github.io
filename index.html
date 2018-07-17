@@ -248,71 +248,7 @@
 			</footer>
 		</div>
 		<script>
-window.debug = false;
-window.time = (new Date()).getTime();
-! function() {
-	var addListener = function(object, type, callback) {
-			object.addEventListener ? object.addEventListener(type, callback, false) : object.attachEvent && object.attachEvent("on" + type, callback);
-		},
-		isStyle = function(file) {
-			var regex = /main\.css$/i;
-			if(debug) {
-				if(window.localStorage){
-					window.localStorage.clear();
-					window.localStorage["__key__"] = time
-				}
-				return false;
-			}
-			return (window.localStorage && window.localStorage[file]);
-		},
-		loadStyle = function(file) {
-			if (window.localStorage && window.XMLHttpRequest){
-				if (isStyle(file)){
-					setStyle(localStorage[file]);
-				} else {
-					var xhr = new XMLHttpRequest;
-					xhr.open("GET", file, !0);
-					addListener(xhr, "load", function() {
-						if(xhr.readyState === 4){
-							setStyle(xhr.responseText);
-							localStorage[file] = xhr.responseText;
-						}
-					});
-					xhr.send();
-				}
-			} else {
-				var c = document.createElement("link");
-				c.href = o;
-				c.rel = "stylesheet";
-				c.type = "text/css";
-				document.getElementsByTagName("head")[0].appendChild(c);
-			}
-		},
-		setStyle = function(css) {
-			var style = document.createElement("style"),
-				textCss = document.createTextNode(css);
-			style.type = "text/css";
-			style.appendChild(textCss);
-			document.getElementsByTagName("head")[0].appendChild(style);
-		};
-	if(!debug){
-		if(window.localStorage) {
-			if(window.localStorage["__stamp__"]) {
-				time = window.localStorage["__stamp__"];
-			}else{
-				window.localStorage["__stamp__"] = time;
-			}
-		}
-	}
-	var fonts = [
-		window.location.origin + '/assets/templates/komsomolskiy/css/main.css?' + time,
-		window.location.origin + '/assets/templates/komsomolskiy/css/komsomolskiy.css?' + time,
-		"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext",
-	];
-	fonts.forEach(function(item, index, array){
-		loadStyle(item);
-	});
-}();
+window.debug=!1,window.time=(new Date).getTime(),function(){var a=window.location.origin,b=function(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)},c=function(a){return debug?(window.localStorage&&(window.localStorage.clear(),window.localStorage.__key__=time),!1):window.localStorage&&window.localStorage[a]},d=function(a){if(window.localStorage&&window.XMLHttpRequest)if(c(a))e(localStorage[a]);else{var d=new XMLHttpRequest;d.open("GET",a,!0),b(d,"load",function(){4===d.readyState&&(e(d.responseText),localStorage[a]=d.responseText)}),d.send()}else{var f=document.createElement("link");f.href=o,f.rel="stylesheet",f.type="text/css",document.getElementsByTagName("head")[0].appendChild(f)}},e=function(a){var b=document.createElement("style"),c=document.createTextNode(a);b.type="text/css",b.appendChild(c),document.getElementsByTagName("head")[0].appendChild(b)};debug||window.localStorage&&(window.localStorage.__stamp__?time=window.localStorage.__stamp__:window.localStorage.__stamp__=time),[a+"/assets/templates/komsomolskiy/css/main.css?"+time,a+"/assets/templates/komsomolskiy/css/komsomolskiy.css?"+time,"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext"].forEach(function(a,b,c){d(a)})}();
 /*!yepnope2.0.0|MIT*/
 window.yepnope=function(a,b){function c(){}function d(a){return Object(a)===a}function e(a){return"string"==typeof a}function f(){return"yn_"+q++}function g(){o&&o.parentNode||(o=b.getElementsByTagName("script")[0])}function h(a){return!a||"loaded"==a||"complete"==a||"uninitialized"==a}function i(b,c){c.call(a)}function j(a,j){var k,l,m;e(a)?k=a:d(a)&&(k=a._url||a.src,l=a.attrs,m=a.timeout),j=j||c,l=l||{};var q,r,t=b.createElement("script");m=m||n.errorTimeout,t.src=k,s&&(t.event="onclick",t.id=t.htmlFor=l.id||f());for(r in l)t.setAttribute(r,l[r]);t.onreadystatechange=t.onload=function(){if(!q&&h(t.readyState)){if(q=1,s)try{t.onclick()}catch(a){}i(k,j)}t.onload=t.onreadystatechange=t.onerror=null},t.onerror=function(){q=1,j(new Error("Script Error: "+k))},p(function(){q||(q=1,j(new Error("Timeout: "+k)),t.parentNode.removeChild(t))},m),g(),o.parentNode.insertBefore(t,o)}function k(f,h){var i,j,k={};d(f)?(i=f._url||f.href,k=f.attrs||{}):e(f)&&(i=f);var l=b.createElement("link");h=h||c,l.href=i,l.rel="stylesheet",l.media="only x",l.type="text/css",p(function(){l.media=k.media||"all"});for(j in k)l.setAttribute(j,k[j]);g(),o.parentNode.appendChild(l),p(function(){h.call(a)})}function l(a){var b=a.split("?")[0];return b.substr(b.lastIndexOf(".")+1)}function m(a,b){var c=a,d=[],e=[];for(var f in b)b.hasOwnProperty(f)&&(b[f]?d.push(encodeURIComponent(f)):e.push(encodeURIComponent(f)));return(d.length||e.length)&&(c+="?"),d.length&&(c+="yep="+d.join(",")),e.length&&(c+=(d.length?"&":"")+"nope="+e.join(",")),c}function n(a,b,c){var e;d(a)&&(e=a,a=e.src||e.href),a=n.urlFormatter(a,b),e?e._url=a:e={_url:a};var f=l(a);if("js"===f)j(e,c);else{if("css"!==f)throw new Error("Unable to determine filetype.");k(e,c)}}var o,p=a.setTimeout,q=0,r={}.toString,s=!(!b.attachEvent||a.opera&&"[object Opera]"==r.call(a.opera));return n.errorTimeout=1e4,n.injectJs=j,n.injectCss=k,n.urlFormatter=m,n}(window,document);
 /*! komsomolskiy_site v1.0.0 | ISC License | https://github.com/komsomolskiy/komsomolskiy.github.io#readme*/
