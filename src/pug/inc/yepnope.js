@@ -103,12 +103,13 @@ var photos = [
 		]
 	}
 ];
-var time = (new Date()).getTime();
+//var time = (new Date()).getTime();
 document.onreadystatechange = function(e){
 	if(document.readyState == 'interactive') {
 		document.body.classList.add('link');
 	}
 };
+
 yepnope('assets/templates/komsomolskiy/js/appjs.js?'+time, undefined, function() {
 	document.onreadystatechange = function(e){
 		if(document.readyState == 'complete') {
@@ -123,10 +124,7 @@ yepnope('assets/templates/komsomolskiy/js/appjs.js?'+time, undefined, function()
 	};
 	yepnope('assets/templates/komsomolskiy/js/hypher.js?'+time, undefined, function() {
 		yepnope('assets/templates/komsomolskiy/js/main.js?'+time, undefined, function() {
-			// Google map
-			yepnope.injectJs('https://maps.googleapis.com/maps/api/js?key=AIzaSyAqObB5jDzWbLoN0_oDxajFw9IsCYrcAjc&callback=' + jQuery.expando, function(){
-				
-			});
+			yepnope.injectJs('https://maps.googleapis.com/maps/api/js?key=AIzaSyAqObB5jDzWbLoN0_oDxajFw9IsCYrcAjc&callback=' + jQuery.expando, function(){});
 			
 			$(window).on('beforeunload', function(e){
 				var $body = $('body');
