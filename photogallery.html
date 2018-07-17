@@ -309,13 +309,15 @@
 		</div>
 		<script>
 ! function() {
+	var debug = true;
 	var addListener = function(object, type, callback) {
 			object.addEventListener ? object.addEventListener(type, callback, false) : object.attachEvent && object.attachEvent("on" + type, callback);
 		},
 		isStyle = function(file) {
 			var regex = /main\.css$/i;
-			if(regex.test(file))
+			if(debug) {
 				return false;
+			}
 			return window.localStorage && localStorage.file
 		},
 		loadStyle = function(file) {
