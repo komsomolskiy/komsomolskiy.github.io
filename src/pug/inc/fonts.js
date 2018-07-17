@@ -35,8 +35,9 @@
 			style.appendChild(textCss);
 			document.getElementsByTagName("head")[0].appendChild(style);
 		};
+	
 	var fonts = [
-		'assets/templates/komsomolskiy/css/komsomolskiy.css?wt598r',
+		window.location.origin + '/assets/templates/komsomolskiy/css/komsomolskiy.css?wt598r',
 		"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext",
 	];
 	fonts.forEach(function(item, index, array){
