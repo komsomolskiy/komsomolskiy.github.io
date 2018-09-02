@@ -14,7 +14,7 @@
 		flex-grow: 1;
 		flex-shrink: 0;
 		flex-basis: 100%;
-		padding-bottom: 30px;
+		padding-bottom: 65px;
 		> .row {
 			> .bread {
 				order: 2;
@@ -25,12 +25,18 @@
 			> .sitecontent {
 				order: 3;
 			}
+			> .party {
+				order: 4;
+			}
 			@media(min-width:1024px) {
 				> .bread {
 					order: 1;
 				}
 				> .sitebar {
 					order: 2;
+				}
+				> .party {
+					
 				}
 			}
 		}
@@ -59,7 +65,6 @@
 	}
 	&-title {
 		text-transform: lowercase;
-		margin-top: 0px;
 		&:first-letter {
 			text-transform: uppercase;
 		}

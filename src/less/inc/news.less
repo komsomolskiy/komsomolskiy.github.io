@@ -37,18 +37,6 @@
 					padding-bottom: 75%;
 				}
 			}
-			&:hover {
-				.img {
-					box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);;
-					transition: all 2.5s;
-					.img-bg {
-						will-change: transform;
-						transition: transform 2.5s cubic-bezier(0.3, 0.61, 0.17, 0.18);
-						transform: scale(1.1);
-					}
-				}
-			}
-			
 		}
 		&-main {
 			display: flex;
@@ -91,6 +79,19 @@
 					line-height: 1;
 					.btnkoms  {
 						margin-left: 30px;
+					}
+				}
+			}
+		}
+		&:hover {
+			.news-item-link {
+				.img {
+					box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);;
+					transition: all 2.5s;
+					.img-bg {
+						will-change: transform;
+						transition: transform 2.5s cubic-bezier(0.3, 0.61, 0.17, 0.18);
+						transform: scale(1.1);
 					}
 				}
 			}

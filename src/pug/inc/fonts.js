@@ -1,4 +1,4 @@
-window.debug = false;
+window.debug = true;
 window.time = (new Date()).getTime();
 ! function() {
 	var origin = window.location.origin;
@@ -6,14 +6,6 @@ window.time = (new Date()).getTime();
 			object.addEventListener ? object.addEventListener(type, callback, false) : object.attachEvent && object.attachEvent("on" + type, callback);
 		},
 		isStyle = function(file) {
-			var regex = /main\.css$/i;
-			if(debug) {
-				if(window.localStorage){
-					window.localStorage.clear();
-					window.localStorage["__key__"] = time
-				}
-				return false;
-			}
 			return (window.localStorage && window.localStorage[file]);
 		},
 		loadStyle = function(file) {
@@ -51,14 +43,19 @@ window.time = (new Date()).getTime();
 			if(window.localStorage["__stamp__"]) {
 				time = window.localStorage["__stamp__"];
 			}else{
+				window.localStorage.clear();
 				window.localStorage["__stamp__"] = time;
 			}
+		}
+	}else{
+		if(window.localStorage) {
+			window.localStorage.clear();
 		}
 	}
 	var fonts = [
 		origin + '/assets/templates/komsomolskiy/css/main.css?' + time,
 		origin + '/assets/templates/komsomolskiy/css/komsomolskiy.css?' + time,
-		"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext",
+		//"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext",
 	];
 	fonts.forEach(function(item, index, array){
 		loadStyle(item);

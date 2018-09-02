@@ -1,0 +1,44 @@
+.party {
+	margin-top: 62px;
+	&--content {
+		&__wrapper {
+			margin-bottom: 30px;
+			justify-content: center;
+		}
+		&__item {
+			//padding-top: @border_p;
+			padding-bottom: @border_p;
+			> a {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				transition: background-color .3s ease;
+				padding: 5px;
+				border-radius: 3px;
+				align-items: center;
+				height: 100%;
+				img {
+					max-width: 80px;
+				}
+				span {
+					padding-left: 10px;
+					flex: 1;
+				}
+				span,
+				img {
+					display: block;
+					.center-block();
+				}
+				&:hover {
+					background-color: #dcecf6;
+				}
+			}
+			.party--image {
+				
+			}
+		}
+	}
+	&--image {
+		
+	}
+}

@@ -3,4 +3,30 @@ main.main.container.clearfix
 		include breadcrumbs
 		.col-lg-3.col-md-3.col-xs-12.sitebar
 			include ../sitebar
-		.col-lg-9.col-md-9.col-xs-12.sitecontent
+		.col-lg-9.col-md-9.col-xs-12.sitecontent.boxshadowmain
+			h1
+				|Главная
+		.col-lg-9.col-md-9.col-md-offset-3.col-xs-12.col-xs-offset-0.party.boxshadowmain
+			h2
+				|Сторонние ресурсы
+			.party--content__wrapper.row
+				.col-lg-4.col-md-6.col-sm-6.col-xs-12.party--content__item
+					a(href="http://www.duma.gov.ru/" target="_blank" rel="nofollow")
+						img.party--image(src=imgdir + "/gosduma.png")
+						span
+							|Государственная дума
+				.col-lg-4.col-md-6.col-sm-6.col-xs-12.party--content__item
+					a(href="http://www.kremlin.ru/" target="_blank" rel="nofollow")
+						img.party--image(src=imgdir + "/gerb_russia.jpg")
+						span
+							|Президент России
+				.col-lg-4.col-md-6.col-sm-6.col-xs-12.party--content__item
+					a(href="http://www.minregion.ru/" target="_blank" rel="nofollow")
+						img.party--image(src=imgdir + "/min_reg_raz.jpg")
+						span
+							|Министерство регионального развития
+				.col-lg-6.col-md-6.col-sm-6.col-xs-12.party--content__item
+					a(href="http://www.gosuslugi.ru/" target="_blank" rel="nofollow")
+						img.party--image(src=imgdir + "/municipal_uslugi.jpg")
+						span
+							|Портал государственных и муниципальных услуг

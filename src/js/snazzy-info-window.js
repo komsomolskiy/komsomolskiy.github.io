@@ -1,5 +1,4 @@
 function initGoogleInfoWindow(){
-	console.log('initGoogleInfoWindow');
 	(function (global, factory) {
 		if (typeof define === "function" && define.amd) {
 			define('SnazzyInfoWindow', ['module', 'exports'], factory);
@@ -631,12 +630,13 @@ function initGoogleInfoWindow(){
 							}
 						}));
 					}
-
+					
 					// Clear out the previous map bounds
 					this._previousWidth = null;
 					this._previousHeight = null;
+					
 					this.trackListener(google.maps.event.addListener(map, 'bounds_changed', function () {
-						var d = map.getDiv();
+						var d = map.getDiv().children[0];
 						var ow = d.offsetWidth;
 						var oh = d.offsetHeight;
 						var pw = _this2._previousWidth;
@@ -696,7 +696,8 @@ function initGoogleInfoWindow(){
 			}, {
 				key: 'getMapInnerBounds',
 				value: function getMapInnerBounds() {
-					var mb = this.getMap().getDiv().getBoundingClientRect();
+					var div = this.getMap().getDiv().children[0];
+					var mb = div.getBoundingClientRect();
 					var mib = {
 						top: mb.top + this._opts.edgeOffset.top,
 						right: mb.right - this._opts.edgeOffset.right,

@@ -20,6 +20,12 @@
 		}
 		var infoWin = [],
 			markers = [],
+			closeFullScreen = function(){
+				var requestMethod = document.webkitCancelFullScreen || document.mozCancelFullScreen || document.exitFullscreen || document.cancelFullScreen;
+				if (requestMethod) {
+					requestMethod.call(document);
+				}
+			},
 			createContent = function(data){
 				var container = $('<div>' +
 						'<div class="custom-img" style="background-image: url('+data.image+');">' +
@@ -40,6 +46,7 @@
 					}).on('click', function(e){
 						e.preventDefault();
 						e.stopPropagation();
+						closeFullScreen();
 						var data = $(this).data('data'),
 							items = [];
 						$.each(data, function(index, item){
@@ -60,6 +67,15 @@
 									}
 								}
 							},
+							buttons: [
+								"zoom",
+								//"share",
+								//"slideShow",
+								"fullScreen",
+								"download",
+								"thumbs",
+								"close"
+							],
 							thumbs : {
 								autoStart: true,
 								axis: "x",

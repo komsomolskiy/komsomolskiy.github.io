@@ -1,12 +1,15 @@
 .container-fluid.photogalleris-item
 	.row
-		a.col-xs-6.photogalleris-item-link.link(href=host + "photogallery.html")
+		a.col-xs-12.col-sm-6.photogalleris-item-link.link(href=host + "photogallery.html")
 			.photogalleris-item-link-img.row(style="background-image: url(assets/templates/komsomolskiy/images/koms.jpg)")
-		.col-xs-6.photogalleris-item-description
+		.col-xs-12.col-sm-6.photogalleris-item-description
 			h3.photogalleris-item-description-title
 				a.link(href=host + "photogallery.html")
 					|Название фотогаллереи №#{n}
-			p.photogalleris-item-description-wrapper
+			div.photogalleris-item-img
+				a.link(href=host + "photogallery.html")
+					img(src="assets/templates/komsomolskiy/images/koms.jpg")
+			p.photogalleris-item-description-wrapper.text-left
 				|Описание фотогаллереи Описание фотогаллереи Описание фотогаллереи 
 			a.link.btnkoms(href=host + "photogallery.html" data-text="Смотреть")
 				span

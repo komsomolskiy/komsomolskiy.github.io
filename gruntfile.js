@@ -101,25 +101,7 @@ module.exports = function(grunt){
 						],
 						'test/css/preloader.css' : [
 							'src/less/preloader.less'
-						]
-					}
-				},
-				font: {
-					options : {
-						compress: false,
-						ieCompat: false,
-						banner: '<%= meta.glyphsicon %>',
-						plugins: [
-							new (require('less-plugin-clean-css'))({
-								level: {
-									1: {
-										specialComments: 0
-									}
-								}
-							})
-						]
-					},
-					files : {
+						],
 						'test/css/komsomolskiy.css' : [
 							'src/less/komsomolskiy.less'
 						]
